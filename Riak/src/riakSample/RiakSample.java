@@ -33,7 +33,8 @@ public class RiakSample {
 			String myFetchedData = fvResp.getValue(String.class);
 			System.out.println("value=" + myFetchedData);
 
-
+			// Specify sloppy quorum of 2 nodes ("Sloppy" because it gets the 2
+			// "healthy" nodes
 			// Not the two absolutely available nodes
 			myKey = Long.toString(System.currentTimeMillis());
 			myLocation = new Location(new Namespace("MyBucket"), myKey);
