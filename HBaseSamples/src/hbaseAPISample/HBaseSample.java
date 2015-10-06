@@ -11,6 +11,7 @@ import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 
 public class HBaseSample {
+	
 	public static void main(String[] args) throws IOException {
 		try {
 			String server = args[0];
@@ -23,7 +24,7 @@ public class HBaseSample {
 			
 			System.out.println("Connected");
 
-			Table myTable = connection.getTable(TableName.valueOf("friends"));
+			Table myTable = connection.getTable(TableName.valueOf("ourfriends"));
  
 			byte[] myRowKey = Bytes.toBytes("guy");
 			byte[] myColFamily=Bytes.toBytes("info");
@@ -62,6 +63,7 @@ public class HBaseSample {
 
 	private static void iterateCF(Table myTable, byte[] myRowKey) throws IOException {
  
+		System.out.println("Iterating...."); 
 		// Iterate through columns in a column families
 		byte [] myColFamily=Bytes.toBytes("friends");
 		Get myGet = new Get(myRowKey);
