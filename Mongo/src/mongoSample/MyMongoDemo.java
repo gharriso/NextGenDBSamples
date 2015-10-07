@@ -65,6 +65,7 @@ public class MyMongoDemo {
 
 		collection.insertOne(people);
 
+		System.out.println('1'); 
 		MongoCursor<Document> cursor = collection.find().iterator();
 		try {
 			while (cursor.hasNext()) {
@@ -73,15 +74,22 @@ public class MyMongoDemo {
 		} finally {
 			cursor.close();
 		}
+		System.out.println('2'); 
 
 		for (Document cur : collection.find()) {
 			System.out.println(cur.toJson());
 		}
 
+		System.out.println('3'); 
 		// now use a query to get 1 document out
 		Document myDoc = collection.find(eq("Name", "Guy")).first();
 		System.out.println(myDoc.toJson());
 
+		database = mongoClient.getDatabase("sakila");
+		collection = database.getCollection("films");
+		for (Document cur : collection.find()) {
+			System.out.println(cur.toJson());
+		}
 		mongoClient.close();
 	}
 }
