@@ -18,5 +18,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/tools/instantclient_12_1/ojdbc6.jar"/>
 	<classpathentry kind="lib" path="C:/tools/instantclient_12_1/orajsoda.jar"/>
+	<classpathentry kind="lib" path="C:/Dropbox/AAAPrimary/src/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Dropbox/AAAPrimary/src/lib/orajsoda.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -96,6 +96,7 @@ public class mongo2ords {
 				oraCollection.insert(oraDoc);
 			}
 			System.out.println(count+" documents inserted"); 
+			mongoClient.close();
 		} catch (Exception x) {
 			x.printStackTrace();
 		}
