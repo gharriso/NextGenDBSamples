@@ -1,0 +1,1 @@
+{ "$and" : [{ "Length" : { "$gte" : 120}} , { "Rating": "G" } ] }
